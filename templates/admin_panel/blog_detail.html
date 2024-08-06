@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Detail Blog</title>
+{% endblock %}
+
+{% block content %}
+<!-- Form Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">{{ blog.title }}</h6>
+                
+                
+                
+                <div style="text-align: justify;" class="form-floating">
+                    <span >{{ blog.description }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Detail info</h6>
+                <div class="border rounded p-4 pb-0 mb-4">
+                    <figure>
+                        <blockquote class="blockquote">
+                            <p>Data create blog</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            {{ blog.data }}
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="border rounded p-4 pb-0 mb-4">
+                    <figure>
+                        <blockquote class="blockquote">
+                            <p>Genre</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            {{ blog.genre }}
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="border rounded p-4 pb-0 mb-0">
+                    <figure>
+                        <blockquote class="blockquote">
+                            <p>Author</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            {{ blog.author.username }}
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        
+        
+       
+        
+    </div>
+</div>
+<!-- Form End -->
+{% endblock %}
