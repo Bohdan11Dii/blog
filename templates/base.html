@@ -68,6 +68,14 @@
 
             {% endblock %}
 
+            <!-- Pagination block -->
+
+            {% block pagination %}
+                {%  include "includes/pagination.html" %}
+            {% endblock %}
+
+            <!-- Pagination end block -->
+
             
 
 
@@ -121,6 +129,8 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/todo.js' %}"></script>
+    <script src="{% static 'js/remove_todo.js' %}"></script>
 </body>
 
 </html>

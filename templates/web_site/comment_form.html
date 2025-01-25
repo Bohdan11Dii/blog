@@ -1,0 +1,27 @@
+{% extends "web_site/base_web_site.html" %}
+
+{% block content %}
+    <h2>Додати коментар</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {% if not user.is_authenticated %}
+            <!-- Поле для нікнейму, якщо користувач анонім -->
+            <div class="form-group">
+                <label for="{{ form.anonymous_username.id_for_label }}">Ваш нікнейм:</label>
+                {{ form.anonymous_username.errors }}
+                {{ form.anonymous_username }}
+            </div>
+        {% endif %}
+
+        <!-- Поле для контенту -->
+        <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">Ваш коментар:</label>
+            {{ form.content.errors }}
+            {{ form.content }}
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Надіслати">
+    </form>
+{% endblock %}

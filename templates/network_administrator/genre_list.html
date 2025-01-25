@@ -10,7 +10,7 @@
     <div class="row g-4">
         <div class="col-12">
             <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">Genres</h6>
+                <h4 class="mb-4" style="text-align: center;">Genres</h4>
                 <div class="table-responsive">
                     
                     <table class="table">
@@ -30,8 +30,8 @@
                                 <th scope="row">{{ genre.id }}</th>
                                 <td>{{ genre.name }}</td>
                                 
-                                <td><a href="{% url 'admin_panel:genre-update' genre.id %}"><button type="button" class="btn btn-outline-warning">Update</button></a></td>
-                                <td><a href=""><button type="button" class="btn btn-outline-primary">Delete</button></a></td>
+                                <td><a href="{% url 'network_administrator:genre-update' genre.id %}"><button type="button" class="btn btn-outline-warning">Update</button></a></td>
+                                <td><a href="{% url 'network_administrator:genre-delete' genre.id %}"><button type="button" class="btn btn-outline-primary">Delete</button></a></td>
                                 
                             </tr>
                         </tbody>
@@ -47,4 +47,7 @@
 {% else %}
 <h1 style="text-align: center; margin-top: 50px;">There are not genre in Genres</h1>
 {% endif %}
+<div style="text-align: right; margin: 20px;">
+    <a href="{% url 'network_administrator:genre-create' %}"><button class="btn_blog_create">Create genre</button></a>
+</div>
 {% endblock %}

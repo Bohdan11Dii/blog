@@ -22,7 +22,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("__debug__/", include("debug_toolbar.urls")),
+    path("accounts/", include("django.contrib.auth.urls")),
     
-    path("", include("admin_panel.urls", namespace="admin_panel")),
+    path("__debug__/", include("debug_toolbar.urls")),
+    path("", include("network_administrator.urls", namespace="network_administrator")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

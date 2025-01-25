@@ -287,3 +287,27 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+
+
+
+/***Button for create blog ***/
+.btn_blog_create {
+    background-color: #e60000; /* Яскраво-червоний */
+    color: #ffffff; /* Білий текст */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.btn_blog_create:hover {
+    background-color: #cc0000; /* Темніший червоний */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn_blog_create:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block title %}
+    <title>Registration</title>
+{% endblock %}
+
+{% block content %}
+        <!-- Sign In Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Registration Account</h3>
+                        </div>
+                        <form action="#" method="post">
+                            {% if form.non_field_errors %}
+                                {% for error in form.non_field_errors %}
+                                    <span class="text-danger">{{ error }}</span>
+                                {% endfor %}
+                            {% endif %}
+                            {% csrf_token %}
+
+                            {% comment %} {% for field in form %}
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            <div class="form-floating mb-4">
+                               
+                                <span  class="">{{field}}</span>
+                            </div>
+                            {% endfor %} {% endcomment %}
+                            {{ form|crispy }}
+
+                            <br>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign In End -->
+{% endblock %}

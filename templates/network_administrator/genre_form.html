@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block title %}
+    <title>Update</title>
+{% endblock %}
+
+{% block content %}
+    <!-- Form Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h4 class="mb-4">{{ object|yesno:"Update,Create" }} Genre</h4>
+                    <form action="" method="post">
+                        {% csrf_token %}
+
+                        {{ form|crispy }}
+                        <br>
+                        <input class="btn btn-outline-success" type="submit" value="Create">
+                        <a href="{% url 'network_administrator:genre-list' %}"><button type="button" class="btn btn-outline-primary">Cancel</button></a>
+
+                       
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Form End -->
+{% endblock %}

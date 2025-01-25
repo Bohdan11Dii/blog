@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from admin_panel.models import(
+from network_administrator.models import(
      Blog,
      Genre,
      Comment,
-     Author
+     Author,
+     ToDoList
 )
 
 
@@ -18,4 +19,5 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Genre)
+admin.site.register(ToDoList)
 admin.site.register(Author, UserAdmin)

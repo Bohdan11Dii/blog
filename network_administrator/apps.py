@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AdminPanelConfig(AppConfig):
+class NetworkAdministratorConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "admin_panel"
+    name = "network_administrator"

@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     
+    "crispy_forms",
+    "crispy_bootstrap4",
     "debug_toolbar",
-    "admin_panel",
+    "django_extensions",
+    "network_administrator",
 ]
 
 INTERNAL_IPS = [
@@ -136,4 +139,10 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "admin_panel.Author"
+AUTH_USER_MODEL = "network_administrator.Author"
+
+LOGIN_REDIRECT_URL = "/"
+# LOGOUT_REDIRECT_URL = 'login'
+# LOGIN_URL = "login"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
