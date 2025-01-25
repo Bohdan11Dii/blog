@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    {% load static %}
+{#    {% load blog_extras %}#}
+    {% load crispy_forms_filters %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Історія</title>
+    <link href="{% static 'css/stories.css' %}" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Історії</h1>
+        <div class="like-section">
+            <form id="like-form" data-url="{% url 'network_administrator:toggle_like' blog.id %}" method="post">
+                {% csrf_token %}
+                <button type="button" class="like-button">
+                    <i class="{% if is_liked %}fa-solid{% else %}fa-regular{% endif %} fa-thumbs-up"></i>
+                    <span>{% if is_liked %}Ви вже вподобали{% else %}Лайк{% endif %}</span>
+                </button>
+                <span class="like-count">{{ blog.like_count }}</span>
+            </form>
+        </div>
+        <a href="{% url 'network_administrator:web-site' %}"><button class="back-button">Назад</button></a>
+    </div>
+    <div class="container">
+        <!-- Заголовок історії -->
+        <div class="story-title">{{ blog.title }}</div>
+        <div class="story-text">
+            {{ blog.description|safe }}
+        </div>
+
+        <!-- Секція коментарів -->
+        <div class="comments-section">
+            <div class="comments-title">Коментарі:</div>
+
+            <!-- Список коментарів -->
+            <div class="comment">
+                {% for comment in blog.comment_set.all %}
+                    {% if comment.user %}
+                    <div class="comment-author">{{ comment.user.username }}</div>
+                    {% else %}
+                    <div class="comment-author">{{ comment.anonymous_username }}</div>
+                        
+                    {% endif %}
+                    <div class="comment-text">{{ comment.content }}</div></p>
+                    <div class="comment-text">{{ comment.created_time }}</div></p>
+                    <hr>
+                {% endfor %}
+                
+            </div>
+            
+
+            <!-- Поле для вводу псевдоніму -->
+            <form action="{% url 'network_administrator:commentary-create' pk=blog.pk %}" method="post">
+                {% csrf_token %}
+            
+                {% if not user.is_authenticated %}
+                    <!-- Поле для нікнейму, якщо користувач анонімний -->
+                    <div class="story-title">
+                        <label for="{{ form.anonymous_username.id_for_label }}">Ваш нікнейм:</label>
+                        {{ form.anonymous_username }}
+                       
+                    </div>
+                {% endif %}
+            
+                <!-- Поле для контенту -->
+                <div class="story-title">
+                    <label for="{{ form.content.id_for_label }}">Ваш коментар:</label>
+                    {{ form.content }}
+                </div>
+            
+                <input class="back-button" type="submit" value="Відправити">
+            </form>
+            
+            
+        </div>
+    </div>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/likes_button.js' %}"></script>
+</body>
+</html>

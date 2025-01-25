@@ -1,0 +1,8 @@
+{% load crispy_forms_filters %}
+
+<form class="d-none d-md-flex ms-4" method="get" action="">
+    {{ search_form|crispy }}
+    <button type="submit" class="btn btn-secondary">
+        <i class="fas fa-search"></i>
+    </button>
+</form> 

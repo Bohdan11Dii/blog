@@ -1,0 +1,285 @@
+# Створено https://www.toptal.com/developers/gitignore/api/python,django,visualstudiocode
+# Редагувати на https://www.toptal.com/developers/gitignore?templates=python,django,visualstudiocode
+
+### Джанго ###
+*.log
+*.горщик
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-журнал
+ЗМІ
+
+# Якщо ваш процес збирання включає виконання collectstatic, то, ймовірно, вам не потрібно або не потрібно включати staticfiles/
+# у вашому сховищі Git. Оновіть і розкоментуйте наступний рядок відповідно.
+# <django-project-name>/staticfiles/
+
+### Стек Django.Python ###
+# Зібрані по байтам / оптимізовані / файли DLL
+*.py[код]
+*$py.class
+
+# розширення C
+*.так
+
+# Розповсюдження / упаковка
+.Python
+будувати/
+розвивати яйця/
+dist/
+завантаження/
+яйця/
+.яйця/
+lib/
+lib64/
+частини/
+sdist/
+змінна/
+колеса/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.яйце
+МАНІФЕСТ
+
+# PyInstaller
+# Зазвичай ці файли записуються за допомогою сценарію python із шаблону
+# перед тим, як PyInstaller створить exe, щоб додати в нього дату/іншу інформацію.
+*.маніфест
+*.spec
+
+# Журнали інсталятора
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Звіти про модульне тестування / покриття
+htmlcov/
+.tox/
+.nox/
+.покриття
+.покриття.*
+.cache
+nosetests.xml
+coverage.xml
+*.обкладинка
+*.py, обкладинка
+.hypothesis/
+.pytest_cache/
+обкладинка/
+
+# Переклади
+*.mo
+
+# Речі Django:
+
+# Речі з колби:
+примірник/
+.webassets-cache
+
+# Scrapy речі:
+.скреб
+
+# Документація Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+мета/
+
+# Блокнот Юпітер
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+# Для бібліотеки чи пакета ви можете проігнорувати ці файли, оскільки код є
+# призначений для роботи в кількох середовищах; інакше перевірте їх у:
+# .python-версія
+
+# pipenv
+# Відповідно до pypa/pipenv#598, рекомендовано включити Pipfile.lock в контроль версій.
+# Однак у випадку співпраці, якщо є залежності чи залежності, що стосуються певної платформи
+# не маючи міжплатформної підтримки, pipenv може встановлювати залежності, які не працюють або ні
+# встановити всі необхідні залежності.
+#Pipfile.lock
+
+#поезія
+# Подібно до Pipfile.lock, зазвичай рекомендується включати poetry.lock в контроль версій.
+# Це особливо рекомендовано для бінарних пакетів, щоб забезпечити відтворюваність, і багато іншого
+# зазвичай ігнорується для бібліотек.
+# https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#поезія.замок
+
+# pdm
+# Подібно до Pipfile.lock, зазвичай рекомендується включати pdm.lock в контроль версій.
+#pdm.lock
+# pdm зберігає конфігурації для всього проекту в .pdm.toml, але рекомендується не включати його
+# в контролі версій.
+# https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; використовується, наприклад, github.com/David-OConnor/pyflow і github.com/pdm-project/pdm
+__pypackages__/
+
+# Селера
+celerybeat-розклад
+celerybeat.pid
+
+# Проаналізовані файли SageMath
+*.sage.py
+
+# Середовища
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Налаштування проекту Spyder
+.spyderproject
+.spyproject
+
+# Налаштування проекту Rope
+.ropeproject
+
+# документація mkdocs
+/сайт
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Перевірка типу багаття
+.pyre/
+
+# аналізатор статичного типу pytype
+.pytype/
+
+# Символи налагодження Cython
+cython_debug/
+
+# PyCharm
+# Спеціальний шаблон JetBrains зберігається в окремому JetBrains.gitignore, який може
+# можна знайти за адресою https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+# і може бути доданий до глобального gitignore або об’єднаний у цей файл. Для більш ядерного
+# параметр (не рекомендовано) ви можете розкоментувати наступне, щоб ігнорувати всю папку ідей.
+#.idea/
+
+### Python ###
+# Зібрані по байтам / оптимізовані / файли DLL
+
+# розширення C
+
+# Розповсюдження / упаковка
+
+# PyInstaller
+# Зазвичай ці файли записуються за допомогою сценарію python із шаблону
+# перед тим, як PyInstaller створить exe, щоб додати в нього дату/іншу інформацію.
+
+# Журнали інсталятора
+
+# Звіти про модульне тестування / покриття
+
+# Переклади
+
+# Речі Django:
+
+# Речі з колби:
+
+# Scrapy речі:
+
+# Документація Sphinx
+
+# PyBuilder
+
+# Блокнот Юпітер
+
+# IPython
+
+# pyenv
+# Для бібліотеки чи пакета ви можете проігнорувати ці файли, оскільки код є
+# призначений для роботи в кількох середовищах; інакше перевірте їх у:
+# .python-версія
+
+# pipenv
+# Відповідно до pypa/pipenv#598, рекомендовано включити Pipfile.lock в контроль версій.
+# Однак у випадку співпраці, якщо є залежності чи залежності, що стосуються певної платформи
+# не маючи міжплатформної підтримки, pipenv може встановлювати залежності, які не працюють або ні
+# встановити всі необхідні залежності.
+
+#поезія
+# Подібно до Pipfile.lock, зазвичай рекомендується включати poetry.lock в контроль версій.
+# Це особливо рекомендовано для бінарних пакетів, щоб забезпечити відтворюваність, і багато іншого
+# зазвичай ігнорується для бібліотек.
+# https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+
+# pdm
+# Подібно до Pipfile.lock, зазвичай рекомендується включати pdm.lock в контроль версій.
+# pdm зберігає конфігурації для всього проекту в .pdm.toml, але рекомендується не включати його
+# в контролі версій.
+# https://pdm.fming.dev/#use-with-ide
+
+# PEP 582; використовується, наприклад, github.com/David-OConnor/pyflow і github.com/pdm-project/pdm
+
+# Селера
+
+# Проаналізовані файли SageMath
+
+# Середовища
+
+# Налаштування проекту Spyder
+
+# Налаштування проекту Rope
+
+# документація mkdocs
+
+# mypy
+
+# Перевірка типу багаття
+
+# аналізатор статичного типу pytype
+
+# Символи налагодження Cython
+
+# PyCharm
+# Спеціальний шаблон JetBrains зберігається в окремому JetBrains.gitignore, який може
+# можна знайти за адресою https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+# і може бути доданий до глобального gitignore або об’єднаний у цей файл. Для більш ядерного
+# параметр (не рекомендовано) ви можете розкоментувати наступне, щоб ігнорувати всю папку ідей.
+
+### Патч Python ###
+# Файл локальної конфігурації Poetry - https://python-poetry.org/docs/configuration/#local-configuration
+поезії.toml
+
+# йорж
+.ruff_cache/
+
+# Файли конфігурації LSP
+pyrightconfig.json
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-nippets
+
+# Локальна історія для Visual Studio Code
+.history/
+
+# Вбудовані розширення коду Visual Studio
+*.vsix
+
+### Патч VisualStudioCode ###
+# Ігнорувати всю локальну історію файлів
+.історія
+.іонід
+
+# Кінець https://www.toptal.com/developers/gitignore/api/python,django,visualstudiocode

@@ -1,0 +1,29 @@
+{% extends "web_site/base_web_site.html" %}
+
+{% block title %}   
+    <title>Blogs</title>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Друга історія -->
+
+
+<!-- Третя історія -->
+
+
+<!-- Четверта історія -->
+{% for blog in blogs %}
+<div class="story-item">
+    <div class="story-title">{{ blog.title }}</div>
+    <div class="story-description">
+        {{ blog.description|truncatewords:20 }}
+    </div>
+    <a href="{% url 'network_administrator:story-detail' blog.id  %}">
+        <button class="view-button">Переглянути</button>
+    </a>
+</div>
+
+{% endfor %}
+{% endblock %}
